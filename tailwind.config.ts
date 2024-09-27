@@ -6,16 +6,20 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+
+  darkMode: ["class"], // Enable dark mode based on a class
+
   theme: {
     extend: {
       fontFamily: {
-        // Add Arabic and English font families
+        // Define Arabic and English font families
         arabic: ['"Tajawal"', '"Cairo"', "sans-serif"],
         english: ['"Inter"', '"Roboto"', "sans-serif"],
         poppins: ["var(--font-poppins)"],
         josefin: ["var(--font-josefin)"],
       },
       colors: {
+        // Define colors for light and dark modes using CSS variables
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
@@ -26,6 +30,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       screens: {
+        // Define custom screen sizes for responsive design
         "2xl": "1536px",
         xl: "1280px",
         lg: "1024px",
@@ -37,4 +42,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;
