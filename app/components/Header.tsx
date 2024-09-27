@@ -6,6 +6,7 @@ import NavItems from "../utils/NavItems";
 import { FiMenu, FiX } from "react-icons/fi"; // Import the burger and close icons
 import useMobileDetection from "../utils/useMobileDetection";
 import { usePathname } from "next/navigation"; // Use `usePathname` instead of `useRouter`
+import ThemeSwitcher from "../utils/ThemeSwitcher";
 
 type Props = {
   activeItem: number;
@@ -80,6 +81,12 @@ const Header: React.FC<Props> = ({ activeItem }) => {
                 isMenuOpen={isMenuOpen}
                 handleCloseMenu={handleCloseMenu}
               />
+              {/* //theme switcher here */}
+              <div className="flex items-center gap-4 bg-transparent">
+                {/* Other header elements like logo */}
+                <ThemeSwitcher /> {/* Add the ThemeSwitcher button */}
+                {/* Burger icon and NavItems */}
+              </div>
             </div>
           </div>
         </div>
